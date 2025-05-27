@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+
+
+:root {
+
+    --main-color : #0f171e;
+    --second-color: #1a242e;
+    --thirt-color: #1d5494;
+
+}
+/* CSS RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: var(--main-color);
+}
+/* HEADER START */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: var(--second-color);
+    color: #fff;
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+}
+
+header form input {
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    background-color: var(--main-color);
+    color: #fff;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+header form input::placeholder {
+    color: var(--thirt-color);
+}
+
+header form input:focus {
+    outline: none;
+}
+/* HEADER END */
+
+/* MAIN START */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 1rem;
+}
+
+main .movie-card {
+    width: 400px;
+    height: 500px;
+    margin: 1rem;
+    background-color: var(--second-color);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 6px rgba(255, 255, 255, 0.411);
+}
+
+main .movie-card img{
+    width: 100%;
+    height: 85%;
+}
+
+main .movie-card .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    color: var(--thirt-color);
+    
+}
+
+main .movie-card .info .green{
+    color: green;
+}
+main .movie-card .info .orange{
+    color: orange;
+}
+main .movie-card .info .red{
+    color: red;
+}
+
+main .movie-card .overview {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--second-color);
+    max-height: 100%;
+    overflow-y: auto;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+    padding: 1rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+main .movie-card:hover .overview{
+    transform: translateY(0);
+}
+
+main .movie-card .info span {
+    background-color: #323d4949;
+    padding: 0.25rem 0.5rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+main .movie-card .overview p {
+    margin-top: 1rem;
+}
+/* MAIN END */
+
+
+/* Footer Start */
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 1rem;
+    background-color: var(--second-color);
+}
+
+footer h3 {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    list-style: none;
+    margin: 1rem 0 2rem 0;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: var(--thirt-color);
+}
+
+footer p {
+    color: #52565a;
+    margin-bottom: 1rem;
+    font-size: 15px;
+}
+/* Footer End */
