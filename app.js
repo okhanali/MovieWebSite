@@ -13,6 +13,7 @@ const main = document.getElementById("main");
 async function getMovies(url) {
     const res = await fetch(url);
     const data = await res.json();
+    console.log(data.results);
     showMovies(data.results);
 }
 
@@ -40,6 +41,8 @@ function showMovies(movies){
 
     movieDiv.innerHTML = 
     `
+
+      <div class="main-blog">
         <div class="movie-card">
         <img src="${IMG_PATH + poster_path}" 
             alt="${title}">
@@ -55,8 +58,9 @@ function showMovies(movies){
                     ${overview}
                 </p>
             </div>
-            
         </div>
+
+      </div>
     
     `
 
@@ -68,9 +72,9 @@ function showMovies(movies){
 
 
 function getClassByRate(vote){
-  if(vote >= 8){
+  if(vote >= 7){
     return "green";
-  } else if (vote >= 5){
+  } else if (vote >= 4){
     return "orange";
   } else {
     return "red";
